@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><templates><template autoinsert="true" context="java" deleted="false" description="iterate over map" enabled="true" name="formap">${:import(java.util.Map.Entry)}&#13;
+for(Entry&lt;${key:argType(map,0)}, ${value:argType(map,1)}&gt; entry : ${map:var(java.util.Map)}.entrySet()) {&#13;
+    ${key} key = entry.getKey();&#13;
+    ${value} value = entry.getValue();&#13;
+    ${cursor}&#13;
+}</template><template autoinsert="true" context="java" deleted="false" description="logger error" enabled="true" name="loge">logger.error(${word_selection}${}, ${exception_variable_name});</template><template autoinsert="true" context="java" deleted="false" description="create new logger" enabled="true" name="logger">${:import(org.slf4j.Logger, org.slf4j.LoggerFactory)}&#13;
+private static final Logger logger = LoggerFactory.getLogger(${enclosing_type}.class);</template><template autoinsert="true" context="java" deleted="false" description="logger info" enabled="true" name="logi">logger.info(${word_selection}${});&#13;
+${cursor}</template><template autoinsert="true" context="java" deleted="false" description="new a hash map" enabled="true" name="newmap">${:import(java.util.Map, java.util.HashMap)}&#13;
+&#13;
+Map&lt;${String}, ${Object}&gt; ${map} = new HashMap&lt;${String}, ${Object}&gt;();&#13;
+${map}.put("${key}", ${value});&#13;
+${cursor}</template><template autoinsert="true" context="java" deleted="false" description="" enabled="true" name="sb">StringBuilder sb = new StringBuilder();&#13;
+sb.append("${s1}").append(${s2}).append("${s3}");&#13;
+${cursor}&#13;
+return sb.toString();</template><template autoinsert="true" context="java" deleted="false" description="format string" enabled="true" name="strf">String.format("${word_selection}${}",${var}${cursor})</template></templates>
